@@ -20,31 +20,29 @@
         angular.module("app", []); // criando um modulo
         angular.module("app").controller("appControler", function(){
             vm = this
-            vm.ola = "Olá, Mundo"
+            vm.ola = "Curso de AngularJS"
+            vm.teste = "Teste"
             console.log(this.ola)
         }); //criando um controller relacionado os modulo
     </script>
 
 </head>
+
+
 <body ng-app="app"> <!-- o html body faz parte do modulo app -->
     <div ng-controller="appControler as vm"> <!-- tudo que acontece no appControler é replicado na div -->
         <h1>{{vm.ola}}</h1>
         <form>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <label for="teste" class="form-label">Nosso teste</label>
+              <input type="text" class="form-control" ng-model="vm.teste" id="teste">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+        </form>
+
+        <h1>{{vm.teste}}</h1>
     </div>
 </body>
+
+
 </html>

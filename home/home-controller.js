@@ -3,5 +3,9 @@ HomeController.$inject = ["$location"]; //inserir dependencias para navegação;
 
 function HomeController($location){
     vm = this;
-    vm.teste = 'Home'
+    vm.teste = 'Home 2'
+
+    vm.navegar = function(){
+        $location.path('cadastro') //.path diz a rota
+    }
 } // estrutura inicial

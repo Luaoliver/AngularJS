@@ -10,40 +10,28 @@
     </script>
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css"> <!-- caminho relativo href e src -->
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script> <!-- injetar bootstrap -->
+    <!-- <script src="http://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
 
     <script src="node_modules\angular\angular.min.js"></script> <!-- injetar angular -->
     <script src="node_modules\angular-route\angular-route.min.js"></script> <!-- injetar angular route -->
 
     <script src="curso-app.js"></script> <!-- injetar curso-app -->
+    <script src="curso-router.js"></script> <!-- injetar rota -->
 
     <script src="cadastro/cadastro-controller.js"></script> <!-- injetar controller -->
+    <script src="home/home-controller.js"></script>
 
     <link rel="shortcut icon" href="assets/favicon.ico">
-
-    <script>
-        angular.module("app").controller("appControler", function(){
-            vm = this
-            vm.ola = "Curso de AngularJS"
-            vm.teste = "Teste"
-            console.log(this.ola)
-        }); //criando um controller relacionado os modulo
-    </script>
 
 </head>
 
 
 <body ng-app="app"> <!-- o html body faz parte do modulo app -->
-    <div ng-controller="appControler as vm"> <!-- tudo que acontece no appControler é replicado na div -->
-        <h1>{{vm.ola}}</h1>
-        <form>
-            <div class="mb-3">
-              <label for="teste" class="form-label">Nosso teste</label>
-              <input type="text" class="form-control" ng-model="vm.teste" id="teste">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div ng-controller="CadastroController as vm"> <!-- tudo que acontece no appControler é replicado na div -->
 
-        <h1>{{vm.teste}}</h1>
+        <div ng-view></div>
+        
     </div>
 </body>
 

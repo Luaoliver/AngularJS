@@ -1,11 +1,11 @@
-angular.module("app").config(function($routerProvider){
-    $routerProvider //injetou a dependência
+angular.module('app').config(function($routeProvider){
+    $routeProvider //injetou a dependência
         .when('/cadastro', { // .quando receber a /chamada de rota vai redirecionar para
-            templateUrl: '/cadastro/cadastro.html',
+            templateUrl: 'cadastro/cadastro.html',
             controller: 'CadastroController as vm'
         }) //abertura da primeira rota
         .otherwise({
-            templateUrl: '/home/home.html',
+            templateUrl: 'home/home.html',
             controller: 'HomeController as vm'
         }) //direcionamento de uma rota default
 })

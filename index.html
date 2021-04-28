@@ -29,7 +29,16 @@
 
 <body ng-app="app"> <!-- o html body faz parte do modulo app -->
     <div ng-controller="CadastroController as vm"> <!-- tudo que acontece no appControler é replicado na div -->
-
+        
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" ng-click="vm.home()">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" ng-click="vm.cadastro()">Cadastro</a>
+            </li>
+        </ul>
+        
         <div ng-view></div>
         
     </div>

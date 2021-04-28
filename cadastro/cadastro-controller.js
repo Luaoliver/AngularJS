@@ -8,4 +8,12 @@ CadastroController.$inject = ['$location'] //inserir dependencias para navegaç�
         vm.navegar = function(){
             $location.path('/') //.path diz a rota, o / direciona pra home, página default
         }
+
+        vm.cadastro = function(){
+            $location.path('cadastro')
+        }
+        
+        vm.home = function(){
+            $location.path('/')
+        }
     } // estrutura inicial

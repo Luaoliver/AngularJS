@@ -8,4 +8,14 @@ function HomeController($location){
     vm.navegar = function(){
         $location.path('cadastro') //.path diz a rota
     }
+
+    vm.cadastro = function(){
+        $location.path('cadastro')
+    }
+    
+    vm.home = function(){
+        $location.path('/')
+    }
+
+    
 } // estrutura inicial

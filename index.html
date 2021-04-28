@@ -31,20 +31,19 @@
 
 <body ng-app="app"> <!-- o html body faz parte do modulo app -->
 
-    <div ng-controller="MenuController as vm">
-        <ul class="nav nav-tabs">
-            <li class="nav-item" ng-repeat="item in vm.itensMenu">
-                <a ng-class="item.classe" ng-click="vm.menu(item.titulo, vm.itensMenu)">{{item.titulo}}</a>
-            </li>
-        </ul>
-    </div>
-    
-
-    <div> <!-- tudo que acontece no appControler é replicado na div -->
-
+    <div class="container">
+        <div ng-controller="MenuController as vm"> <!-- tudo que acontece no appControler é replicado na div -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item" ng-repeat="item in vm.itensMenu">
+                    <a ng-class="item.classe" ng-click="vm.menu(item.titulo, vm.itensMenu)">{{item.titulo}}</a>
+                </li>
+            </ul>
+        </div>
+     
         <div ng-view></div>
-        
+
     </div>
+        
 </body>
 
 

@@ -13,7 +13,7 @@ function HomeController($location, CursoService){
     vm.listarClientes = function(){
         CursoService.exec_GET().then(function(response){
             if(response){
-                console.log(response)
+                vm.clientes = response
             }
         })
     }

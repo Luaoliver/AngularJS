@@ -6,6 +6,10 @@ function HomeController($location, CursoService){
     vm.texto = 'Home'
     vm.clientes = ''
 
+    vm.init = function(){
+        vm.listarClientes()
+    }
+
     vm.navegar = function(){
         $location.path('Cadastro') //.path diz a rota
     }

@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" ng-init="vm.init()"> <!-- no momento em que a tela é carregada a função em init é chamada-->
 
     <h1>{{vm.texto}}</h1>
 
-    <button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Lista</button> <!-- ng-click caprtura o click do ususário e executa o que foi atribuido-->
+    <!-- <button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Lista</button>  //ng-click caprtura o click do ususário e executa o que foi atribuido-->
 
     <table class="table">
         <thead>

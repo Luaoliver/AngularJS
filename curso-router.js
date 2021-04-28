@@ -1,6 +1,6 @@
 angular.module('app').config(function($routeProvider){
     $routeProvider //injetou a dependência
-        .when('/cadastro', { // .quando receber a /chamada de rota vai redirecionar para
+        .when('/Cadastro', { // .quando receber a /chamada de rota vai redirecionar para
             templateUrl: 'cadastro/cadastro.html',
             controller: 'CadastroController as vm'
         }) //abertura da primeira rota

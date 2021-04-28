@@ -4,11 +4,26 @@ MenuController.$inject = ['$location'] //inserir dependencias para navegação; 
     function MenuController($location){
         vm = this;
 
-        vm.cadastro = function(){
-            $location.path('cadastro')
+        vm.itensMenu = [
+            {
+                titulo: 'Home',
+                classe: 'nav-link'
+            },
+            {
+                titulo: 'Cadastro',
+                classe: 'nav-link'
+            }
+        ]
+
+        vm.menu = function(rota, array){
+            angular.forEach(array, function(item){
+                if(item.titulo == rota){
+                    item.classe = 'nav-link active'
+                } else {
+                    item.classe = 'nav-link'
+                }
+            })
+            $location.path(rota)
         }
-        
-        vm.home = function(){
-            $location.path('/')
-        }
+
     }

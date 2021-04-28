@@ -6,6 +6,6 @@ function HomeController($location){
     vm.teste = 'Home'
 
     vm.navegar = function(){
-        $location.path('cadastro') //.path diz a rota
+        $location.path('Cadastro') //.path diz a rota
     }
 } // estrutura inicial

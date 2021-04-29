@@ -30,4 +30,8 @@ function HomeController($location, CursoService){
         })
     }
 
+    vm.editar = function(id){
+        $location.path('Cadastro/' + id)
+    }
+
 } // estrutura inicial

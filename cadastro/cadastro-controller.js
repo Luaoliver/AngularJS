@@ -6,10 +6,12 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'] //ins
         vm.teste = 'Cadastro'
         vm.cliente = {}
         vm.idCli = undefined
+        vm.textoBotao = 'Cadastrar'
 
         if($routeParams.idCli){
             vm.idCli = $routeParams.idCli
             buscarId(vm.idCli)
+            vm.textoBotao = 'Editar'
         }
 
         vm.navegar = function(){
@@ -25,21 +27,21 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'] //ins
             vm.navegar('/')
         }
 
-        /** function buscarId(id){
-            CursoService.exec_GET_ID(id).then(function(response){
-                if(response){
-                    vm.cliente = response
-                }
-            })
-        } */
-
-        buscarId = (id) =>{
+        function buscarId(id){
             CursoService.exec_GET_ID(id).then(function(response){
                 if(response){
                     vm.cliente = response
                 }
             })
         }
+
+        /** buscarId = (id) =>{
+            CursoService.exec_GET_ID(id).then(function(response){
+                if(response){
+                    vm.cliente = response
+                }
+            })
+        } */
 
         vm.limpar = function(){
             vm.cliente = {}

@@ -19,11 +19,20 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'] //ins
         }
 
         vm.cadastrar = function(){
-            CursoService.exec_POST(vm.cliente).then(function(response){
-                if(response){
-                    vm.cliente = response
-                }
-            })
+            if(vm.textoBotao == 'Cadastrar'){
+                CursoService.exec_POST(vm.cliente).then(function(response){
+                    if(response){
+                        vm.cliente = response
+                    }
+                })
+            } else if(vm.textoBotao == 'Editar'){
+                CursoService.exec_PUT(vm.cliente).then(function(response){
+                    if(response){
+                        vm.cliente = response
+                    }
+                })
+            }
+            
             vm.navegar('/')
         }
 

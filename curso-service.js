@@ -17,6 +17,9 @@ CursoService.$inject = ['$http']
             },
             exec_POST : function(cliente){
                 return $http.post(REST, cliente).then(tratarResposta, tratarErro)
+            },
+            exec_PUT : function(cliente){
+                return $http.put(REST + '/' + cliente.id, cliente).then(tratarResposta, tratarErro)
             }
         }
 

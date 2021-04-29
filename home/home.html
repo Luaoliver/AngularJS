@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="cliente in vm.clientes">
+          <tr ng-repeat="cliente in vm.clientes | orderBy : 'nome' ">
             <th scope="row">{{cliente.id}}</th>
             <td>{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>

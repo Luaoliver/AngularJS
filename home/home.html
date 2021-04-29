@@ -1,14 +1,12 @@
 <div class="container" ng-init="vm.init()"> <!-- no momento em que a tela é carregada a função em init é chamada-->
 
-    <!--<h1>{{vm.texto}}</h1>-->
-
-    <!-- <button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Lista</button>  //ng-click caprtura o click do ususário e executa o que foi atribuido-->
-
-    
     <div class="container" ng-if="vm.error">
         <alert-para-usuario msg="'A conexão com o banco de dados falhou!'" tipo="'erro'"> <!-- diretiva-->
         </alert-para-usuario>
     </div>
+
+    <label for="exampleDataList" class="form-label">Filtro de pesquisa</label>
+    <input class="form-control" list="datalistOption" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="filtrar">
 
     <table class="table" ng-if="vm.clientes">
         <thead>
@@ -21,7 +19,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="cliente in vm.clientes | orderBy : 'nome' ">
+          <tr ng-repeat="cliente in vm.clientes | filter : vm.filtroPesquisa | orderBy : 'nome' ">
             <th scope="row">{{cliente.id}}</th>
             <td>{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>

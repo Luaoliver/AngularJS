@@ -23,6 +23,7 @@
     <script src="cadastro/cadastro-controller.js"></script> <!-- injetar controller -->
     <script src="home/home-controller.js"></script>
     <script src="index-controller.js"></script>
+    <script src="componentes/componente-alert.js"></script>
 
     <link rel="shortcut icon" href="assets/favicon.ico">
 
@@ -30,6 +31,12 @@
 
 
 <body ng-app="app"> <!-- o html body faz parte do modulo app -->
+
+    <div class="container">
+        <alert-para-usuario msg="'teste'"> <!-- diretiva-->
+
+        </alert-para-usuario>
+    </div>
 
     <div class="container">
         <div ng-controller="MenuController as vm"> <!-- tudo que acontece no appControler é replicado na div -->

@@ -1,11 +1,13 @@
 <div class="container" ng-init="vm.init()"> <!-- no momento em que a tela é carregada a função em init é chamada-->
 
-    <h1>{{vm.texto}}</h1>
+    <!--<h1>{{vm.texto}}</h1>-->
 
     <!-- <button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Lista</button>  //ng-click caprtura o click do ususário e executa o que foi atribuido-->
 
-    <div class="alert alert-danger" role="alert" ng-if="vm.error">
-      A conexão com o banco de dados falhou!
+    
+    <div class="container" ng-if="vm.error">
+        <alert-para-usuario msg="'A conexão com o banco de dados falhou!'" tipo="'erro'"> <!-- diretiva-->
+        </alert-para-usuario>
     </div>
 
     <table class="table" ng-if="vm.clientes">

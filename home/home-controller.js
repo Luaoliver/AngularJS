@@ -22,4 +22,12 @@ function HomeController($location, CursoService){
         })
     }
 
+    vm.excluir = function(id){
+        CursoService.exec_DEL(id).then(function(response){
+            if(response){
+                //mensagem resposta
+            }
+        })
+    }
+
 } // estrutura inicial

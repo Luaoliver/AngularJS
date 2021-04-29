@@ -17,8 +17,16 @@
             <th scope="row">{{cliente.id}}</th>
             <td>{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>
-            <td><button type="button" class="btn btn-outline-warning">Editar</button></td>
-            <td><button type="button" class="btn btn-outline-danger">Excluir</button></td>
+            <td>
+              <button type="button" class="btn btn-outline-warning">
+                Editar
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-danger" ng-click="vm.excluir(cliente.id)">
+                Excluir
+              </button>
+            </td>
           </tr>
         </tbody>
     </table>

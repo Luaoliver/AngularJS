@@ -16,5 +16,10 @@ CadastroController.$inject = ['$location', 'CursoService'] //inserir dependencia
                     vm.cliente = response
                 }
             })
+            vm.navegar('/')
+        }
+
+        vm.limpar = function(){
+            vm.cliente = {}
         }
     } // estrutura inicial

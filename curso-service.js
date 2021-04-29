@@ -6,7 +6,10 @@ CursoService.$inject = ['$http']
         var service = {
             exec_GET : function(){
                 return $http.get('http://localhost:3000/Clientes').then(tratarResposta, tratarErro)
-            } // then(duas funções de callback)
+            }, // then(duas funções de callback)
+            exec_POST : function(cliente){
+                return $http.post('http://localhost:3000/Clientes', cliente).then(tratarResposta, tratarErro)
+            }
         }
 
         function tratarResposta(response){

@@ -1,3 +1,20 @@
-<h1>{{vm.teste}}</h1>
+<div class="container">
 
-<button type="button" class="btn btn-primary" ng-click="vm.navegar()">Navegar</button> <!-- ng-click caprtura o click do ususário e executa o que foi atribuido-->
+    <h1>{{vm.teste}}</h1>
+
+    <!--  <button type="button" class="btn btn-primary" ng-click="vm.navegar()">Navegar</button> //ng-click caprtura o click do ususário e executa o que foi atribuido-->
+    
+    <form>
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" ng-model="vm.cliente.nome" placeholder="Nome do cliente">
+        </div>
+        <div class="form-group">
+            <label for="rg">RG:</label>
+            <input type="text" class="form-control" id="rg" ng-model="vm.cliente.rg" placeholder="RG do cliente">
+        </div>
+    </form>
+    <button type="button" class="btn btn-primary" ng-click="vm.cadastrar()">Cadastrar</button>
+    <button type="button" class="btn btn-secondary">Limpar</button>
+
+</div>

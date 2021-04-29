@@ -9,6 +9,9 @@ CursoService.$inject = ['$http']
             exec_GET : function(){
                 return $http.get(REST).then(tratarResposta, tratarErro)
             }, // then(duas funções de callback)
+            exec_GET_ID : function(id){
+                return $http.get(REST + '/' + id).then(tratarResposta, tratarErro)
+            },
             exec_DEL : function(id){
                 return $http.delete(REST + '/' + id).then(tratarResposta, tratarErro)
             },

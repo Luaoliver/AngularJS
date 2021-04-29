@@ -4,7 +4,11 @@
 
     <!-- <button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Lista</button>  //ng-click caprtura o click do ususário e executa o que foi atribuido-->
 
-    <table class="table">
+    <div class="alert alert-danger" role="alert" ng-if="vm.error">
+      A conexão com o banco de dados falhou!
+    </div>
+
+    <table class="table" ng-if="vm.clientes">
         <thead>
           <tr>
             <th scope="col">Id</th>

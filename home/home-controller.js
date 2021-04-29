@@ -5,6 +5,7 @@ function HomeController($location, CursoService){
     vm = this;
     vm.texto = 'Home'
     vm.clientes = ''
+    vm.error = false
 
     vm.init = function(){
         vm.listarClientes()
@@ -18,6 +19,8 @@ function HomeController($location, CursoService){
         CursoService.exec_GET().then(function(response){
             if(response){
                 vm.clientes = response
+            } else {
+                vm.error = true
             }
         })
     }
